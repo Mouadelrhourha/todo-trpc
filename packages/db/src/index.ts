@@ -12,4 +12,6 @@ export function createDb(env: DatabaseConfig) {
   return drizzle({ client, relations });
 }
 
+export * from "drizzle-orm";
+
 export type Database = ReturnType<typeof createDb>;
