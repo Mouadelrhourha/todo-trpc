@@ -1,45 +1,45 @@
 {
-  "name": "web",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "check-types": "react-router typegen && tsc --noEmit",
-    "env:generate": "varlock codegen"
-  },
-  "dependencies": {
-    "@react-router/fs-routes": "^8.3.1",
-    "@react-router/node": "^8.3.1",
-    "@react-router/serve": "^8.3.1",
-    "@tanstack/react-query": "^5.104.2",
-    "@todo-trpc/api": "workspace:*",
-    "@todo-trpc/ui": "workspace:*",
-    "@trpc/client": "catalog:",
-    "@trpc/server": "catalog:",
-    "@trpc/tanstack-react-query": "^11.19.0",
-    "@varlock/vite-integration": "1.5.4",
-    "isbot": "^5.2.2",
-    "lucide-react": "catalog:",
-    "next-themes": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "react-router": "^8.3.1",
-    "sonner": "catalog:",
-    "varlock": "catalog:",
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@react-router/dev": "^8.3.1",
-    "@tailwindcss/vite": "^4.3.3",
-    "@tanstack/react-query-devtools": "^5.104.2",
-    "@todo-trpc/config": "workspace:*",
-    "@types/node": "^26.4.1",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "vite": "^8.2.2"
-  }
+	"name": "web",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "react-router build",
+		"dev": "react-router dev",
+		"start": "react-router-serve ./build/server/index.js",
+		"check-types": "react-router typegen && tsc --noEmit",
+		"env:generate": "varlock codegen"
+	},
+	"dependencies": {
+		"@react-router/fs-routes": "^8.3.1",
+		"@react-router/node": "^8.3.1",
+		"@react-router/serve": "^8.3.1",
+		"@tanstack/react-query": "^5.104.2",
+		"@todo-trpc/api": "workspace:*",
+		"@todo-trpc/ui": "workspace:*",
+		"@trpc/client": "catalog:",
+		"@trpc/server": "catalog:",
+		"@trpc/tanstack-react-query": "^11.19.0",
+		"@varlock/vite-integration": "1.5.4",
+		"isbot": "^5.2.2",
+		"lucide-react": "catalog:",
+		"next-themes": "catalog:",
+		"react": "catalog:",
+		"react-dom": "catalog:",
+		"react-router": "^8.3.1",
+		"sonner": "catalog:",
+		"varlock": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@react-router/dev": "^8.3.1",
+		"@tailwindcss/vite": "^4.3.3",
+		"@tanstack/react-query-devtools": "^5.104.2",
+		"@todo-trpc/config": "workspace:*",
+		"@types/node": "^26.4.1",
+		"@types/react": "catalog:",
+		"@types/react-dom": "catalog:",
+		"tailwindcss": "catalog:",
+		"typescript": "catalog:",
+		"vite": "^8.2.2"
+	}
 }

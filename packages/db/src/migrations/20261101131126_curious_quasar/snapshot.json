@@ -1,0 +1,80 @@
+{
+	"version": "7",
+	"dialect": "sqlite",
+	"id": "9bf5861a-7e9b-4e86-894a-128efac032a7",
+	"prevIds": ["1650fbe7-96c2-4c2d-a7d4-e016c4e3eb30"],
+	"ddl": [
+		{
+			"name": "todos",
+			"entityType": "tables"
+		},
+		{
+			"table": "todos",
+			"name": "id",
+			"type": "integer",
+			"notNull": false,
+			"autoincrement": true,
+			"default": null,
+			"generated": null,
+			"entityType": "columns"
+		},
+		{
+			"table": "todos",
+			"name": "title",
+			"type": "text",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"entityType": "columns"
+		},
+		{
+			"table": "todos",
+			"name": "completed",
+			"type": "integer",
+			"notNull": false,
+			"autoincrement": false,
+			"default": "false",
+			"generated": null,
+			"entityType": "columns"
+		},
+		{
+			"table": "todos",
+			"name": "updated_at",
+			"type": "integer",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"entityType": "columns"
+		},
+		{
+			"table": "todos",
+			"name": "created_at",
+			"type": "integer",
+			"notNull": true,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"entityType": "columns"
+		},
+		{
+			"table": "todos",
+			"name": "date_to_execute",
+			"type": "integer",
+			"notNull": false,
+			"autoincrement": false,
+			"default": null,
+			"generated": null,
+			"entityType": "columns"
+		},
+		{
+			"table": "todos",
+			"name": "todos_pk",
+			"columns": ["id"],
+			"nameExplicit": false,
+			"entityType": "pks"
+		}
+	],
+	"renames": []
+}

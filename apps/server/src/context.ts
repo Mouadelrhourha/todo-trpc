@@ -4,13 +4,15 @@ import type { Context as HonoContext } from "hono";
 import { db } from "./services";
 
 export type CreateContextOptions = {
-  context: HonoContext;
+	context: HonoContext;
 };
 
-export async function createContext(_options: CreateContextOptions): Promise<ApiContext> {
-  return {
-    db,
-  };
+export async function createContext(
+	_options: CreateContextOptions,
+): Promise<ApiContext> {
+	return {
+		db,
+	};
 }
 
 export type Context = Awaited<ReturnType<typeof createContext>>;

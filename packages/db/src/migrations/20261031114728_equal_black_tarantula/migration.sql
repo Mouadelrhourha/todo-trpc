@@ -5,3 +5,4 @@ CREATE TABLE `todos` (
 	`updated_at` integer NOT NULL,
 	`created_at` integer NOT NULL
 );
+

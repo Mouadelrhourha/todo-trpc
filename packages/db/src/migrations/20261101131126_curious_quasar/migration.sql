@@ -1,0 +1,1 @@
+ALTER TABLE `todos` ADD `date_to_execute` integer;
