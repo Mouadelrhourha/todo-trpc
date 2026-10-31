@@ -1,0 +1,21 @@
+{
+  "name": "@todo-trpc/api",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@todo-trpc/db": "workspace:*",
+    "@trpc/client": "catalog:",
+    "@trpc/server": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@todo-trpc/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
