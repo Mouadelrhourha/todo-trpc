@@ -17,9 +17,10 @@ import {
 	ItemTitle,
 } from "@todo-trpc/ui/components/item";
 import { Label } from "@todo-trpc/ui/components/label";
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
+import { TodoItem } from "@/components/todo";
+import { TodoList } from "@/components/todoList";
 import { trpc } from "@/utils/trpc";
-
 import type { Route } from "./+types/_index";
 
 const TITLE_TEXT = `
@@ -44,6 +45,12 @@ export function meta(_: Route.MetaArgs) {
 		{ name: "description", content: "todo-trpc is a web application" },
 	];
 }
+type TodoContextData = {
+	onClickMarkAsCompleted: (id: number) => void;
+};
+export const TodoContext = createContext<TodoContextData>({
+	onClickMarkAsCompleted: (id: number) => {},
+});
 
 export default function Home() {
 	const {
@@ -157,25 +164,10 @@ export default function Home() {
 					{isPending && <p>Loading...</p>}
 					{isSuccess && (
 						<div className="flex w-full max-w-md flex-col gap-6">
-							{todos.map((todo) => (
-								<Item variant="outline">
-									<ItemContent>
-										<ItemTitle>{todo.title}</ItemTitle>
-										<ItemDescription>
-											{new Date(todo.dateToExecute).toLocaleDateString()}
-										</ItemDescription>
-									</ItemContent>
-									<ItemActions>
-										<Button
-											onClick={() => onClickMarkAsCompleted(todo.id)}
-											variant="outline"
-											size="sm"
-										>
-											Mark as completed
-										</Button>
-									</ItemActions>
-								</Item>
-							))}
+							<TodoContext value={{ onClickMarkAsCompleted }}>
+								<TodoList todos={todos} />
+							</TodoContext>
+
 							<div> {todos.length === 0 ? "no todos found" : null} </div>
 						</div>
 					)}
